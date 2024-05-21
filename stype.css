@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+#durchschnittsbereich {
+    display: flex;
+    flex-wrap: wrap; /* Erlaubt den Elementen, in eine neue Zeile zu wechseln */
+    justify-content: space-around;
+    gap: 10px; /* Fügt einen vertikalen und horizontalen Abstand zwischen den Elementen hinzu */
+    margin-bottom: 20px;
+}
+
+.durchschnittswert {
+    flex: 1 1 auto; /* Ermöglicht den Elementen, den verfügbaren Platz zu nutzen */
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Zentriert den Text innerhalb der Elemente */
+    min-width: 140px; /* Stellt sicher, dass die Elemente nicht zu schmal werden */
+}
+
+#tabelleContainer {
+    flex-grow: 1;
+    overflow: auto;
+    max-height: calc(33% - 40px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+#wehenSteuerung {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#aktiverZaehler {
+    text-align: center;
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .durchschnittswert {
+        padding: 8px;
+        min-width: 120px; /* Passt die Mindestbreite für kleinere Bildschirme an */
+        font-size: 14px; /* Verkleinert die Schriftgröße für bessere Lesbarkeit */
+    }
+
+    #wehenSteuerung {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%; /* Stellt sicher, dass die Buttons die volle Breite nutzen */
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .durchschnittswert, th, td {
+        background-color: #555;
+        color: #fff;
+    }
+
+    #wehenSteuerung button {
+        background-color: #777;
+        color: #fff;
+    }
+
+    #wehenSteuerung button:hover {
+        background-color: #888;
+    }
+}
