@@ -1,1 +1,48 @@
-"Hello World" 
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wehenzähler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="durchschnittsbereich">
+        <span id="durchschnittDauer" class="durchschnittswert">Ø Dauer: 0 Sekunden</span>
+        <span id="durchschnittAbstand" class="durchschnittswert">Ø Abstand: 0 Sekunden</span>
+        <span id="durchschnittDauerLetzteStunde" class="durchschnittswert">Ø Dauer letzte Stunde: 0 Sekunden</span>
+        <span id="durchschnittPauseLetzteStunde" class="durchschnittswert">Ø Abstand letzte Stunde: 0 Sekunden</span>
+    </div>
+    
+    
+
+<div id="tabelleContainer">
+    <table id="wehenTabelle">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Startzeit</th>
+                <th>Endzeit</th>
+                <th>Dauer (Sekunden)</th>
+                <th>Pause (Sekunden)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Daten werden dynamisch eingefügt -->
+        </tbody>
+    </table>
+</div>
+
+<div id="wehenSteuerung">
+    <button id="wehenButton">Start</button>
+    <button id="loeschButton">Daten löschen</button>
+</div>
+
+<div id="aktiverZaehler" style="display: none;">Wehe läuft...</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
